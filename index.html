@@ -59,5 +59,30 @@
             <tr><td>Reese's Peanut Butter Cup</td><td>Maryville Hyvee</td><td>$0.75</td></tr>
             <tr><td>Ali's Bakery Donut</td><td>Maryville (6th & Main)</td><td>$1.00</td></tr>
         </table>
+        <hr>
+        <h2>
+            algorithm
+        </h2>
+        <blockquote cite="https://cp-algorithms.com/graph/breadth-first-search.html">
+            The algorithm takes as input an unweighted graph and the id of the source vertex s. The input graph can be directed or undirected, it does not matter to the algorithm.
+        </blockquote>
+        <pre>
+            q.push(s);
+            used[s] = true;
+            p[s] = -1;
+            while (!q.empty()) {
+                int v = q.front();
+                q.pop();
+                for (int u : adj[v]) {
+                    if (!used[u]) {
+                        used[u] = true;
+                        q.push(u);
+                        d[u] = d[v] + 1;
+                        p[u] = v;
+                    }
+                }
+
+        </pre>
+
     </body>
 </html>
